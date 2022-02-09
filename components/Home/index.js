@@ -1,6 +1,7 @@
 import { Container } from '@chakra-ui/react';
 import React from 'react';
 import Banner from '../common/Banner';
+import Benefits from './Benefits';
 import Service from './Service';
 
 export default function MainPage() {
@@ -9,6 +10,7 @@ export default function MainPage() {
     <Container maxW='7xl'>
         <Banner type='Home'/> 
         <Service />
+        <Benefits />
     </Container>
     </>
   );

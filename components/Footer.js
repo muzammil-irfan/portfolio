@@ -29,7 +29,7 @@ export default function Footer() {
         <SimpleGrid  columns={{ base: 1, md: 2, lg: 4 }} >
           <Stack p={6} mx="auto">
             <Box>
-              <Image src={Logo} />
+              <Image src={Logo} alt='Skillatria Logo' />
             </Box>
             <Text>
               Skillatria provides you the solution of your businesses to grow it

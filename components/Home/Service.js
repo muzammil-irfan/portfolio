@@ -9,7 +9,7 @@ import Card from "../common/Card";
 export default function Service() {
   return (
     <>
-      <Flex flexDirection={'column'} justify={'center'}>
+      <Flex flexDirection={'column'} justify={'center'} my={4}>
           <Flex justify={'center'} my={6}>
         <Heading textAlign={'center'} fontSize={{base:'xl',sm:'2xl',md:'4xl'}} >Services that you were looking for</Heading>
 

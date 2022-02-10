@@ -1,0 +1,12 @@
+{
+  "/_app": "pages/_app.js",
+  "/api/hello": "pages/api/hello.js",
+  "/": "pages/index.html",
+  "/portfolio/graphicdesign": "pages/portfolio/graphicdesign.html",
+  "/portfolio/photography": "pages/portfolio/photography.html",
+  "/portfolio/videoediting": "pages/portfolio/videoediting.html",
+  "/portfolio/webdevelopment": "pages/portfolio/webdevelopment.html",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/404": "pages/404.html"
+}

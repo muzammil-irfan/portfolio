@@ -11,7 +11,7 @@ export default function Service() {
     <>
       <Flex flexDirection={'column'} justify={'center'}>
           <Flex justify={'center'} my={6}>
-        <Heading as={'h1'} >Services that you were looking for</Heading>
+        <Heading textAlign={'center'} fontSize={{base:'xl',sm:'2xl',md:'4xl'}} >Services that you were looking for</Heading>
 
           </Flex>
         <SimpleGrid columns={{base:1,md:2}} gap={6}>

@@ -4,16 +4,33 @@ import {
   MenuItem,
   MenuList,
   Flex,
+  HStack,
   Box,
+  useDisclosure,
   Button,
+  Drawer,
+  DrawerBody,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerHeader,
+  IconButton,
+  
+  Text,
+  CloseButton,
+  LinkItems
 } from "@chakra-ui/react";
-import { ChevronDownIcon } from "@chakra-ui/icons";
+import { ChevronDownIcon,HamburgerIcon } from "@chakra-ui/icons";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import Logo from "../public/images/SkillatriaHeartLogo.png";
+import CloseIcon from '@chakra-ui/icons';
+import Router from "next/router";
+
 export default function Header() {
-  const [expand, setExpand] = useState(false);
+  // const [expand, setExpand] = useState(false);
+  const { isOpen, onOpen, onClose } = useDisclosure()
+
   const navData = [
     {
       label: "Home",
@@ -49,20 +66,20 @@ export default function Header() {
       href: "/contact",
     },
   ];
-
+  // const router = Router();
   return (
     <>
       <Flex
         align={"center"}
         justify="space-between"
-        display={{ base: "none", md: "flex" }}
+        // 
         p={3}
         shadow="md"
       >
         <Box position={"relative"}>
           <Image src={Logo} alt="Skillatria Logo" height={60} width={200} />
         </Box>
-        <Flex justify="space-evenly" marginRight={6} gap={[3, 6]}>
+        <Flex justify="space-evenly" marginRight={6} gap={[3, 6]} display={{ base: "none", md: "flex" }}>
           {navData.map((item, index) => {
             return (
               <>
@@ -94,8 +111,65 @@ export default function Header() {
             );
           })}
         </Flex>
+        <Box display={{md: "none" }}>
+          <IconButton icon={<HamburgerIcon />} aira-label='Hamburger Icon' onClick={onOpen} my={1} variant='ghost' /> 
+          <Drawer placement={'right'} onClose={onClose} isOpen={isOpen}>
+        <DrawerOverlay />
+        <DrawerContent>
+          <DrawerHeader >
+            <HStack justifyContent={'flex-end'}>
+          <CloseButton  onClick={onClose} />
+            </HStack>
+          </DrawerHeader>
+          <DrawerBody>
+          <Flex
+            align={"center"}
+            flexDirection={"column"}
+            gap={3}
+            height={"full"}
+          >
+            {navData.map((item, index) => {
+              return (
+                <>
+                  {item.label === "Portfolio" ? (
+                    <>
+                      <Menu py={2}>
+                        <MenuButton rightIcon={<ChevronDownIcon />}>
+                          Portfolio
+                        </MenuButton>
+                        <MenuList>
+                          {item.options.map((option, index) => {
+                            return (
+                              <>
+                                <Link href={option.href} key={index}>
+                                  <a>
+                                    <MenuItem>{option.label}</MenuItem>
+                                  </a>
+                                </Link>
+                              </>
+                            );
+                          })}
+                        </MenuList>
+                      </Menu>
+                    </>
+                  ) : (
+                    <Box onClick={()=>{onClose()}} py={2} key={index}>
+                    <Link href={item.href} >
+                      <a>{item.label}</a>
+                    </Link>
+                    </Box>
+                  )}
+                </>
+              );
+            })}
+          </Flex>
+          </DrawerBody>
+        </DrawerContent>
+      </Drawer>
+          </Box>
       </Flex>
-      <Flex
+
+      {/* <Flex
         align={"center"}
         display={{ base: "flex", md: "none" }}
         p={1}
@@ -172,7 +246,8 @@ export default function Header() {
         <Box position={"relative"}>
           <Image src={Logo} alt="Skillatria Logo" height={30} width={100} />
         </Box>
-      </Flex>
+      </Flex> */}
+      
     </>
   );
 }

@@ -7,10 +7,10 @@ import {
   Text,
 } from "@chakra-ui/react";
 import React from "react";
-import Satisfaction from "../../public/images/icons/satisfaction.png";
-import Quality from "../../public/images/icons/quality.png";
-import Time from "../../public/images/icons/time.png";
-import Creative from "../../public/images/icons/creativity.png";
+import Satisfaction from '../../public/images/icons/satisfaction.png';
+import Quality from '../../public/images/icons/quality.png';
+import Time from '../../public/images/icons/time.png';
+import Creative from '../../public/images/icons/creativity.png';
 import Image from "next/image";
 
 export default function Benefits() {

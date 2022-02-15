@@ -20,7 +20,7 @@ export default function Benefits() {
         <Flex justify={"center"} my={8}>
           <Stack textAlign={"center"}>
             <Heading fontSize={{base:'xl',sm:'2xl',md:'4xl'}}>
-              But Wait.......................... Why us?
+              Why us?
             </Heading>
             <Heading fontSize={{base:'xl',sm:'2xl',md:'4xl'}}>Lets check out the Benefits First</Heading>
           </Stack>

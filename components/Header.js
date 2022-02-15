@@ -7,34 +7,31 @@ import {
   HStack,
   Box,
   useDisclosure,
-  Button,
   Drawer,
   DrawerBody,
   DrawerOverlay,
   DrawerContent,
   DrawerHeader,
   IconButton,
-  
-  Text,
   CloseButton,
-  LinkItems
 } from "@chakra-ui/react";
 import { ChevronDownIcon,HamburgerIcon } from "@chakra-ui/icons";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React from "react";
 import Logo from "../public/images/SkillatriaHeartLogo.png";
-import CloseIcon from '@chakra-ui/icons';
-import Router from "next/router";
 
 export default function Header() {
-  // const [expand, setExpand] = useState(false);
   const { isOpen, onOpen, onClose } = useDisclosure()
 
   const navData = [
+    // {
+    //   label: "Home",
+    //   href: "/",
+    // },
     {
-      label: "Home",
-      href: "/",
+      label: "About us",
+      href: "/about",
     },
     {
       label: "Portfolio",
@@ -58,10 +55,6 @@ export default function Header() {
       ],
     },
     {
-      label: "About us",
-      href: "/about",
-    },
-    {
       label: "Contact us",
       href: "/contact",
     },
@@ -76,9 +69,13 @@ export default function Header() {
         p={3}
         shadow="md"
       >
+        <Link href='/'>
+        <a>
         <Box position={"relative"}>
           <Image src={Logo} alt="Skillatria Logo" height={60} width={200} />
         </Box>
+        </a>
+        </Link>
         <Flex justify="space-evenly" marginRight={6} gap={[3, 6]} display={{ base: "none", md: "flex" }}>
           {navData.map((item, index) => {
             return (

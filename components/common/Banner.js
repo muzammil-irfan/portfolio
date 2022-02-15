@@ -6,9 +6,8 @@ export default function Banner(props) {
     <>
     {
         props.type === 'Home' && 
-      <Flex height={{base:400,md:600}} width={'full'} >
-          <SimpleGrid columns={2}>
-          <Stack px={3} justify={'center'} gap={3}>
+      <Flex height={{base:400,md:600}}  textAlign='center' backgroundColor='blue.900' color='white' justifyContent={'center'}  >
+          <Stack px={3} justifyContent={'center'} width={'4xl'} gap={3}>
               <Heading size={fontSize}>
                 Welcome to the Heart of skills
               </Heading>
@@ -16,8 +15,83 @@ export default function Banner(props) {
                  Skillatria provides you the solution of your businesses to grow it digitally with its creativity and services.
               </Text>
           </Stack>
-          </SimpleGrid>
       </Flex>
+    }
+    {
+      props.type === 'webDevelopment' && (
+        <>
+        <Flex height={{base:400,md:600}} justifyContent={'center'} >
+          <Stack width='40%' p={8} justifyContent={'center'}  >
+          <Heading size={fontSize}>
+                Welcome to the Heart of skills
+              </Heading>
+              <Text fontSize={{base:'xs',md:'2xl'}} >
+                 Skillatria provides you the solution of your businesses to grow it digitally with its creativity and services.
+              </Text>
+          </Stack>
+          <Stack width='50%' p={8} justifyContent={'center'}  >
+
+          </Stack>
+        </Flex>
+        </>
+      )
+    }
+    {
+      props.type === 'graphicDesign' && (
+        <>
+        <Flex height={{base:400,md:600}} justifyContent={'center'} >
+          <Stack width='40%' p={8} justifyContent={'center'}  >
+          <Heading size={fontSize}>
+                Welcome to the Heart of skills
+              </Heading>
+              <Text fontSize={{base:'xs',md:'2xl'}} >
+                 Skillatria provides you the solution of your businesses to grow it digitally with its creativity and services.
+              </Text>
+          </Stack>
+          <Stack width='50%' p={8} justifyContent={'center'}  >
+
+          </Stack>
+        </Flex>
+        </>
+      )
+    }
+    {
+      props.type === 'videoEditing' && (
+        <>
+        <Flex height={{base:400,md:600}} justifyContent={'center'} >
+          <Stack width='40%' p={8} justifyContent={'center'}  >
+          <Heading size={fontSize}>
+                Welcome to the Heart of skills
+              </Heading>
+              <Text fontSize={{base:'xs',md:'2xl'}} >
+                 Skillatria provides you the solution of your businesses to grow it digitally with its creativity and services.
+              </Text>
+          </Stack>
+          <Stack width='50%' p={8} justifyContent={'center'}  >
+
+          </Stack>
+        </Flex>
+        </>
+      )
+    }
+    {
+      props.type === 'photography' && (
+        <>
+        <Flex height={{base:400,md:600}} justifyContent={'center'} >
+          <Stack width='40%' p={8} justifyContent={'center'}  >
+          <Heading size={fontSize}>
+                Welcome to the Heart of skills
+              </Heading>
+              <Text fontSize={{base:'xs',md:'2xl'}} >
+                 Skillatria provides you the solution of your businesses to grow it digitally with its creativity and services.
+              </Text>
+          </Stack>
+          <Stack width='50%' p={8} justifyContent={'center'}  >
+
+          </Stack>
+        </Flex>
+        </>
+      )
     }
     </>
   );

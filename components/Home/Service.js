@@ -1,8 +1,8 @@
 import { Flex, Heading, SimpleGrid } from "@chakra-ui/react";
-import WebDevelopment from '../../public/images/services/WebDevelopment.png';
-import ProductPhotography from '../../public/images/services/productPhotography.png';
-import VideoEditing from '../../public/images/services/videoEditing.png';
-import GraphicDesign from '../../public/images/services/graphicDesign.png';
+import WebDevelopment from '../../public/images/WebDevelopment.png';
+import ProductPhotography from '../../public/images/productPhotography.png';
+import VideoEditing from '../../public/images/videoEditing.png';
+import GraphicDesign from '../../public/images/graphicDesign.png';
 import React from "react";
 import Card from "../common/Card";
 

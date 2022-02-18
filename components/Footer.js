@@ -1,4 +1,4 @@
-import { SimpleGrid, Flex, Stack, Box, Text, Heading } from "@chakra-ui/react";
+import { Flex, Stack, Box, Text, Heading } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";

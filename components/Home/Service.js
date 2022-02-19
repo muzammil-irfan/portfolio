@@ -1,5 +1,5 @@
 import { Flex, Heading, SimpleGrid } from "@chakra-ui/react";
-import WebDevelopment from '../../public/images/WebDevelopment.png';
+import WebDevelopment from '../../public/images/webDevelopment.png';
 import ProductPhotography from '../../public/images/productPhotography.png';
 import VideoEditing from '../../public/images/videoEditing.png';
 import GraphicDesign from '../../public/images/graphicDesign.png';

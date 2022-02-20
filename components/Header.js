@@ -65,6 +65,7 @@ export default function Header() {
       <Flex
         align={"center"}
         justify="space-between"
+        bg={"gray.50"}
         // 
         p={3}
         shadow="md"
@@ -72,7 +73,7 @@ export default function Header() {
         <Link href='/'>
         <a>
         <Box position={"relative"}>
-          <Image src={Logo} alt="Skillatria Logo" height={60} width={200} />
+          <Image placeholder='blur' src={Logo} alt="Skillatria Logo" height={60} width={200} />
         </Box>
         </a>
         </Link>

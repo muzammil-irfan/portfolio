@@ -16,7 +16,7 @@ import Image from "next/image";
 export default function Benefits() {
   return (
     <>
-      <Flex flexDirection={"column"} justify={"center"} my={8}>
+      <Flex flexDirection={"column"} justify={"center"} my={8} >
         <Flex justify={"center"} my={8}>
           <Stack textAlign={"center"}>
             <Heading fontSize={{base:'xl',sm:'2xl',md:'4xl'}}>

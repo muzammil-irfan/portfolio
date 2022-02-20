@@ -10,7 +10,7 @@ export default function Card(props) {
             <Link href={props.href}>
             <a>
             <Box>
-            <Image src={props.src} width={props.width} height={props.height} alt={props.alt} />
+            <Image src={props.src} placeholder='blur' width={props.width} height={props.height} alt={props.alt} />
             </Box>
             <Flex justify={'center'}>
                 <Heading size='xl'>{props.label}</Heading>

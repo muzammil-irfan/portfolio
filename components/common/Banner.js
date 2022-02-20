@@ -1,13 +1,19 @@
 import React from "react";
-import { Flex, Heading, SimpleGrid, Stack, Text,useBreakpointValue } from '@chakra-ui/react';
+import { Flex, Heading, Stack, Text,useBreakpointValue } from '@chakra-ui/react';
+// import Particles from "../Home/particles/Particles";
+import HomeBannerImage from '../../public/images/homeBanner.jpg';
+// import ParticlesBackground from "../Home/particles/Particles";
+import Image from "next/image";
 export default function Banner(props) {
   const fontSize = useBreakpointValue({base:'md',sm:'xl',md:'2xl',lg:'3xl'})
   return (
     <>
     {
-        props.type === 'Home' && 
-      <Flex height={{base:400,md:600}}  textAlign='center' backgroundColor='blue.900' color='white' justifyContent={'center'}  >
-          <Stack px={3} justifyContent={'center'} width={'4xl'} gap={3}>
+      props.type === 'Home' && 
+      <Flex height={{base:400,md:600}} textAlign='center' color='white' justifyContent={'center'} >
+        {/* <ParticlesBackground /> */}
+        <Image src={HomeBannerImage} alt='Welcome to skillatria' placeholder='blur' objectFit="cover" />
+          <Stack px={8} justifyContent={'center'} height={{base:400,md:600}} alignItems='center' position='absolute' >
               <Heading size={fontSize}>
                 Welcome to the Heart of skills
               </Heading>
@@ -15,6 +21,7 @@ export default function Banner(props) {
                  Skillatria provides you the solution of your businesses to grow it digitally with its creativity and services.
               </Text>
           </Stack>
+
       </Flex>
     }
     {

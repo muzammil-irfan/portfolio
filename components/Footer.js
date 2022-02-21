@@ -5,7 +5,6 @@ import React from "react";
 import Logo from "../public/images/SkillatriaHeartLogo.png";
 import {
   FaFacebook,
-  FaWhatsapp,
   FaFacebookMessenger,
   FaLinkedin,
   FaSkype,
@@ -64,9 +63,10 @@ export default function Footer() {
             <Heading mb={2}>Portfolio</Heading>
             <Stack spacing={4}>
               {portfolio.map((item, index) => {
+                const contact = '#contact'
                 return (
                   <>
-                    <Link href={item.href} key={index}>
+                    <Link href={contact} key={index}>
                       <a>{item.label}</a>
                     </Link>
                   </>

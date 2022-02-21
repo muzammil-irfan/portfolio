@@ -9,20 +9,21 @@ import Card from "../common/Card";
 export default function Service() {
   return (
     <>
-      <Flex flexDirection={'column'} justify={'center'} my={4}>
+      <Flex flexDirection={'column'} justify={'center'} my={4} id='services'>
           <Flex justify={'center'} my={6}>
         <Heading textAlign={'center'} fontSize={{base:'xl',sm:'2xl',md:'4xl'}} >Services that you were looking for</Heading>
 
           </Flex>
         <SimpleGrid columns={{base:1,md:2}} gap={6}>
           {servicesData.map((item, index) => {
+            const contact = '#contact';
             return (
               <>
               <Card
                 key={index}
                 label={item.label}
                 src={item.image}
-                href={item.href}
+                href={contact}
               />
               </>
             );

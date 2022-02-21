@@ -6,6 +6,9 @@ import styles from '../styles/Home.module.css'
 export default function Home() {
   return (
    <>
+   <Head>
+     <title>Welcome to skillatria</title>
+   </Head>
     <MainPage />
    </>
 

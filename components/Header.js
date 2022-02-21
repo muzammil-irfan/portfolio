@@ -29,10 +29,10 @@ export default function Header() {
     //   label: "Home",
     //   href: "/",
     // },
-    {
-      label: "About us",
-      href: "/about",
-    },
+    // {
+    //   label: "About us",
+    //   href: "#about",
+    // },
     {
       label: "Portfolio",
       options: [
@@ -56,7 +56,7 @@ export default function Header() {
     },
     {
       label: "Contact us",
-      href: "/contact",
+      href: "#contact",
     },
   ];
   // const router = Router();
@@ -86,9 +86,10 @@ export default function Header() {
                     <MenuButton >{item.label}<ChevronDownIcon /></MenuButton>
                     <MenuList>
                       {item.options.map((option, index) => {
+                        const contact = '#services'
                         return (
                           <>
-                            <Link href={option.href} key={index}>
+                            <Link href={contact} key={index}>
                               <a>
                                 <MenuItem>{option.label}</MenuItem>
                               </a>
@@ -99,7 +100,7 @@ export default function Header() {
                     </MenuList>
                   </Menu>
                 ) : (
-                  <Link href={item.href} key={index}>
+                  <Link href={'#contact'} key={index}>
                   <a>
                     {item.label}
                   </a>
@@ -127,6 +128,7 @@ export default function Header() {
             height={"full"}
           >
             {navData.map((item, index) => {
+             
               return (
                 <>
                   {item.label === "Portfolio" ? (
@@ -137,9 +139,10 @@ export default function Header() {
                         </MenuButton>
                         <MenuList>
                           {item.options.map((option, index) => {
+                             const contact = '#services'
                             return (
                               <>
-                                <Link href={option.href} key={index}>
+                                <Link href={contact} key={index}>
                                   <a>
                                     <MenuItem>{option.label}</MenuItem>
                                   </a>
@@ -152,7 +155,7 @@ export default function Header() {
                     </>
                   ) : (
                     <Box onClick={()=>{onClose()}} py={2} key={index}>
-                    <Link href={item.href} >
+                    <Link href={'#contact'} >
                       <a>{item.label}</a>
                     </Link>
                     </Box>

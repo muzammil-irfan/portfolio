@@ -11,24 +11,11 @@ import {
   Stack,
   Textarea,
   useToast,
-  toast,
 } from "@chakra-ui/react";
-import { useFormik } from "formik";
-import * as React from "react";
+import React,{useState} from "react";
 
 const ContactSection = () => {
-  const formik = useFormik({
-    initialValues: {
-      name: "",
-      email: "",
-      services: "",
-      message: "",
-    },
-    onSubmit: (e) => {
-      console.log('submit')
-      handleSubmit(e);
-    },
-  });
+  const [value, setvalue] = useState({name:'',email:'',services:'',message:''})
   const encode = (data) => {
     return Object.keys(data)
       .map(
@@ -38,6 +25,8 @@ const ContactSection = () => {
   };
   const toast = useToast();
   const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(event)
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -62,8 +51,16 @@ const ContactSection = () => {
         });
       });
   };
-  const values = formik.values;
-  const change = formik.handleChange;
+  //radio is giving values directly thats why making a different function
+  const handleRadio = (values)=>{
+    setvalue({...value,services:values})
+    console.log(value)
+  }
+  const handleChange = (e)=>{
+    setvalue({...value,[e.target.name]:e.target.value})
+    console.log(value)
+  }
+  const change = handleChange;
   return (
     <>
       <Flex direction="column" gap={4} m={10}>
@@ -85,7 +82,7 @@ const ContactSection = () => {
               spacing="6"
               name="contact"
               method="POST"
-              onSubmit={formik.handleSubmit}
+              onSubmit={handleSubmit}
               as="form"
             >
               <Input type="hidden" name="contact" value="contact" />
@@ -99,7 +96,7 @@ const ContactSection = () => {
                       name="name"
                       type="text"
                       onChange={change}
-                      value={values.name}
+                      value={value.name}
                     />
                   </FormControl>
                 </Stack>
@@ -112,7 +109,7 @@ const ContactSection = () => {
                       name="email"
                       type="email"
                       onChange={change}
-                      value={values.email}
+                      value={value.email}
                     />
                   </FormControl>
                 </Stack>
@@ -121,15 +118,14 @@ const ContactSection = () => {
                 <FormControl isRequired>
                   <FormLabel htmlFor="services">Services</FormLabel>
                   <RadioGroup
-                    // value={values.services}
-                    onChange={change}
-                    name="services"
+                    value={value.services}
+                    onChange={handleRadio}
                   >
                     <Stack spacing={4}>
                       {radioData.map((item, index) => {
                         return (
                           <Radio key={index}
-                          value={item} name="services">
+                          value={item} >
                             {item}
                           </Radio>
                         );
@@ -145,7 +141,7 @@ const ContactSection = () => {
                     placeholder="Message..."
                     name="message"
                     onChange={change}
-                    value={values.message}
+                    value={value.message}
                   />
                 </FormControl>
               </Stack>

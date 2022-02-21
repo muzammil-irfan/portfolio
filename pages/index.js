@@ -8,6 +8,7 @@ export default function Home() {
    <>
    <Head>
      <title>Welcome to skillatria</title>
+     <meta name='description' content='We are a talented team who provides the micro services of ecommerce like website development, Graphic design, Video editing and product photography' /> 
    </Head>
     <MainPage />
    </>

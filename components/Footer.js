@@ -40,7 +40,6 @@ export default function Footer() {
         justify="center"
         flexDirection={{ base: "column", md: "row" }}
       >
-        {/* <SimpleGrid  columns={{ base: 1, md: 3 }} > */}
         <Stack p={6} maxW={{ md: "300px" }}>
           <Link href="/">
             <a>
@@ -97,7 +96,6 @@ export default function Footer() {
             </Stack>
           </Stack>
         </Stack>
-        {/* </SimpleGrid> */}
       </Flex>
     </>
   );

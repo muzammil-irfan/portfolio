@@ -10,9 +10,6 @@ import { GTM_ID, pageview } from '../lib/gtm'
 function MyApp({ Component, pageProps }) {
   const router = useRouter()
   useEffect(() => {
-    // const handleRouteChange = (url) => {
-    //   gtag.pageview(url)
-    // }
     router.events.on('routeChangeComplete', pageview  )
     return () => {
       router.events.off('routeChangeComplete', pageview )
@@ -23,6 +20,7 @@ function MyApp({ Component, pageProps }) {
     <>
       {/* Google Tag Manager - Global base code */}
       <Script
+      id='my-script'
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `

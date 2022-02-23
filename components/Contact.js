@@ -12,62 +12,57 @@ import {
   Textarea,
   useToast,
 } from "@chakra-ui/react";
-import React,{useState} from "react";
+import React, { useState } from "react";
+import axios from "axios";
 
 const ContactSection = () => {
-  const [value, setvalue] = useState({name:'',email:'',services:'',message:''})
-  const encode = (data) => {
-    return Object.keys(data)
-      .map(
-        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-      )
-      .join("&");
-  };
+  const [value, setvalue] = useState({
+    name: "",
+    email: "",
+    services: "",
+    message: "",
+  });
+  const [loading, setloading] = useState(false)
   const toast = useToast();
   const handleSubmit = (event) => {
+    setloading(true);
     event.preventDefault();
-    console.log(event)
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({
-        "form-name": event.target.getAttribute("name"),
-        ...name,
-      }),
-    })
-      .then(() => {
+    axios
+      .post("/api/contact", value)
+      .then((res) => {
         toast({
           title: "Thank you for contacting us",
           status: "success",
           duration: 3000,
         });
+        setloading(false);
       })
       .catch((error) => {
-        console.log(error);
+        console.log(error.message);
         toast({
           title: "We apolojize for failure, kindly try again",
           status: "error",
           duration: 3000,
         });
+        setloading(false);
       });
+
   };
   //radio is giving values directly thats why making a different function
-  const handleRadio = (values)=>{
-    setvalue({...value,services:values})
-    console.log(value)
-  }
-  const handleChange = (e)=>{
-    setvalue({...value,[e.target.name]:e.target.value})
-    console.log(value)
-  }
+  const handleRadio = (values) => {
+    setvalue({ ...value, services: values });
+  };
+  const handleChange = (e) => {
+    setvalue({ ...value, [e.target.name]: e.target.value });
+  };
   const change = handleChange;
   return (
     <>
       <Flex direction="column" gap={4} m={10}>
         <Stack spacing="8" id="contact">
           <Box
-            py={{ base: "0", sm: "8" }}
-            px={{ base: "4", sm: "10" }}
+            py={8}
+            px={8}
             bg={"gray.50"}
             boxShadow={{ base: "none", sm: "md" }}
             borderRadius={{ base: "none", sm: "xl" }}
@@ -80,7 +75,6 @@ const ContactSection = () => {
             {/* <form > */}
             <Stack
               spacing="6"
-              name="contact"
               method="POST"
               onSubmit={handleSubmit}
               as="form"
@@ -117,15 +111,11 @@ const ContactSection = () => {
               <Stack spacing="5" w={{ md: "50%" }}>
                 <FormControl isRequired>
                   <FormLabel htmlFor="services">Services</FormLabel>
-                  <RadioGroup
-                    value={value.services}
-                    onChange={handleRadio}
-                  >
+                  <RadioGroup value={value.services} onChange={handleRadio}>
                     <Stack spacing={4}>
                       {radioData.map((item, index) => {
                         return (
-                          <Radio key={index}
-                          value={item} >
+                          <Radio key={index} value={item}>
                             {item}
                           </Radio>
                         );
@@ -146,8 +136,8 @@ const ContactSection = () => {
                 </FormControl>
               </Stack>
               <Stack spacing="6" direction={"row"} justify="flex-end">
-                <Button variant="primary" type="submit" bg="gray.200" px={8}>
-                  Send
+                <Button isLoading={loading} loadingText='Sending...' variant="primary" type="submit" bg="gray.200" px={8}>
+                  Send Message
                 </Button>
               </Stack>
             </Stack>

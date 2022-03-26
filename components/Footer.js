@@ -14,26 +14,26 @@ export default function Footer() {
   const portfolio = [
     {
       label: "Web Development",
-      href: "/portfolio/webdevelopment",
+      href: "/services/webdevelopment",
     },
     {
       label: "Graphic Design",
-      href: "/portfolio/graphicdesign",
+      href: "/services/graphicdesign",
     },
     {
       label: "Video Editing",
-      href: "/portfolio/videoediting",
+      href: "/services/videoediting",
     },
     {
       label: "Photography",
-      href: "/portfolio/photography",
+      href: "/services/photography",
     },
   ];
   return (
     <>
       <Flex
         py={6}
-        bg={"gray.50"}
+        bg={"background"}
         boxShadow='inner'
         mt={6}
         justify="center"
@@ -60,7 +60,7 @@ export default function Footer() {
           p={6}
         >
           <Stack>
-            <Heading mb={2}>Portfolio</Heading>
+            <Heading mb={2}>Services</Heading>
             <Stack spacing={4}>
               {portfolio.map((item, index) => {
                 const contact = '#contact'

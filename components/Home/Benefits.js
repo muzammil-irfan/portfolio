@@ -6,6 +6,7 @@ import {
   Box,
   Text,
 } from "@chakra-ui/react";
+import CommonHeading from "../common/CommonHeading";
 import React from "react";
 import Satisfaction from '../../public/images/icons/satisfaction.png';
 import Quality from '../../public/images/icons/quality.png';
@@ -19,17 +20,17 @@ export default function Benefits() {
       <Flex flexDirection={"column"} justify={"center"} my={8} >
         <Flex justify={"center"} my={8}>
           <Stack textAlign={"center"}>
-            <Heading fontSize={{base:'xl',sm:'2xl',md:'4xl'}}>
+            <CommonHeading fontSize={{base:'xl',sm:'2xl',md:'4xl'}}>
               Why us?
-            </Heading>
-            <Heading fontSize={{base:'xl',sm:'2xl',md:'4xl'}}>Lets check out the Benefits First</Heading>
+            </CommonHeading>
+            <Text fontWeight={'medium'} fontSize={{base:'xl',sm:'2xl',md:'4xl'}}>Lets check out the Benefits First</Text>
           </Stack>
         </Flex>
         <SimpleGrid columns={{ sm: 1, md: 2 }} gap={8} mx={4}>
           {benefitsData.map((item, index) => {
             return (
               <>
-                <Stack key={index} direction={"row"} px={4} m={2} justifyContent='center'>
+                <Stack key={item.heading} direction={"row"} px={4} m={2} justifyContent='center'>
                   <Box p={2}>
                     <Image src={item.icon} width={80} height={80} alt={item.heading} />
                   </Box>
@@ -41,7 +42,7 @@ export default function Benefits() {
               </>
             );
           })}
-          <Stack>Hello</Stack>
+          {/* <Stack>Hello</Stack> */}
         </SimpleGrid>
       </Flex>
     </>

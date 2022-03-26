@@ -6,7 +6,7 @@ import { useEffect } from 'react'
 import Script from 'next/script'
 import { useRouter } from 'next/router'
 import { GTM_ID, pageview } from '../lib/gtm'
-
+import theme from '../lib/theme'
 function MyApp({ Component, pageProps }) {
   const router = useRouter()
   useEffect(() => {
@@ -32,7 +32,7 @@ function MyApp({ Component, pageProps }) {
           `,
         }}
       />
-    <ChakraProvider>
+    <ChakraProvider theme={theme}>
       <Header />
      <Component {...pageProps} />
      <Footer /> 

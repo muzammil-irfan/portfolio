@@ -1,8 +1,10 @@
 import React from 'react'
-import { Flex, Stack, Heading, Text,Box} from '@chakra-ui/react'
+import { Flex, Stack, Heading, Text,useBreakpointValue} from '@chakra-ui/react'
 import Image from 'next/image';
 
 export default function CommonBanner(props) {
+    const heading= useBreakpointValue({base:"xs",sm:"lg",md:"2xl",lg:"4xl"})
+        const text= useBreakpointValue({base:"9px",sm:"sm",md:"lg",lg:"xl"})
   return (
     <>
     {/* <Flex  zIndex={0} > */}
@@ -23,17 +25,17 @@ export default function CommonBanner(props) {
     <Box position='absolute' top='70px' zIndex={-1} height={{base:"120px",sm:"200px",md:"350px",lg:'400px'}} bg='primary' width='full' />
     </Flex> */}
     {/* </Flex> */}
-    <Flex justify={'center'} color='white'>
-        <Flex maxW='5xl' px={8}>
-            <Stack width='50%'>
-            <Heading as='h1' >
+    <Flex justify={'center'} color='white' bg='primary'>
+        <Flex maxW='5xl' px={8} >
+            <Stack width='40%'  justify='center'>
+            <Heading as='h1' fontSize={heading} >
                 {props.title}
             </Heading>
-            <Text>
+            <Text fontSize={text}>
                 {props.description}
             </Text>
             </Stack>
-            <Stack width={"50%"} >
+            <Stack width={"60%"} >
             <Image src={props.imageUrl}  alt={props.imageAlt} />
         </Stack>
         </Flex>

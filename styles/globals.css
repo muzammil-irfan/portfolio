@@ -15,3 +15,15 @@ a {
 * {
   box-sizing: border-box;
 }
+.swiper {
+  height: 100%;
+  width:100%;
+}
+.swiper-wrapper{
+  
+  align-items: center;
+}
+.swiper2 {
+  width: 300px;
+  height: 320px;
+}

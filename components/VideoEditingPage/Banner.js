@@ -1,15 +1,14 @@
 import {
-  Box,
-  Flex,
-  Heading,
-  Stack,
-  Text,
-  useBreakpointValue,
-} from "@chakra-ui/react";
-import React from "react";
-import Image from "next/image";
-import webBanner from "../../public/images/webDev/webBanner.png";
-
+    Box,
+    Flex,
+    Heading,
+    Stack,
+    Text,
+    useBreakpointValue,
+  } from "@chakra-ui/react";
+  import React from "react";
+  import Image from "next/image";
+import videoEditingBanner from '../../public/images/videoEditing/videoEditingBanner.png'
 export default function Banner() {
   const heading = useBreakpointValue({
     base: "xs",
@@ -25,7 +24,7 @@ export default function Banner() {
   });
   return (
     <>
-      <Flex justifyContent={"center"} color="white">
+    <Flex justifyContent={"center"} color="white">
         <Flex maxW="5xl" px={{ base: 2, sm: 8 }}>
           <Stack
             width={{ base: "50%", sm: "50%" }}
@@ -33,7 +32,7 @@ export default function Banner() {
             pt={{ base: 6, sm: 10, md: "10vh" }}
           >
             <Heading as="h1" fontSize={heading}>
-              WEBSITE DEVELOPMENT
+              VIDEO EDITING/ANIMATION
             </Heading>
             <Text fontSize={text}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -45,7 +44,7 @@ export default function Banner() {
             position="relative"
             bottom="20px"
           >
-            <Image src={webBanner} alt={"Website Development"} />
+            <Image src={videoEditingBanner} alt={"VIDEO EDITING/ANIMATION "} />
           </Stack>
         </Flex>
         <Box
@@ -58,5 +57,5 @@ export default function Banner() {
         />
       </Flex>
     </>
-  );
+  )
 }

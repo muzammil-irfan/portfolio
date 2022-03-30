@@ -7,7 +7,7 @@ import ReactJs from "../../public/images/webDev/reactjs.png";
 import NextJs from "../../public/images/webDev/nextjs.png";
 import Image from "next/image";
 export default function Technologies() {
-  const heading = useBreakpointValue({base:'sm',sm:"2xl"})
+  // const heading = useBreakpointValue({base:'sm',sm:"2xl"})
   return (
     <>
       <Flex direction="column" alignItems={'center'} mt={20}>
@@ -32,31 +32,14 @@ const TechCard = (props) => {
   return (
     <>
       <Flex py={6} direction='column' alignItems='center' >
-      
-      {/* <Stack maxW={'500px'} position='relative'> */}
       <AspectRatio ratio={'16/9'} maxW={'250px'} >
 
         <Image src={props.imageUrl || '/'}  alt={props.imageAlt}  />
       </AspectRatio>
-        {/* <AspectRatio  ratio={1}> */}
-        {/* </AspectRatio> */}
-      {/* </Stack> */}
             <Text textAlign={'center'} width='75%'> 
             {props.description} 
             </Text>
       <Stack  >
-        {/* <Stack>  
-        <Heading>
-          {props.title}
-        </Heading>
-        </Stack>
-        <Link href={props.href}>
-        <a>
-          <Flex alignItems={'center'}>
-            <HiOutlineArrowNarrowRight /> &nbsp; Learn more
-          </Flex>
-        </a>
-        </Link>*/}
       </Stack> 
     </Flex>
     </>

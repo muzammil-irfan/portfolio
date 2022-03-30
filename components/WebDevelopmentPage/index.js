@@ -10,7 +10,6 @@ export default function WebDevelopmentPage() {
   return (
     <>
     <Banner />
-    {/* <CommonBanner title='Website Development' description={description} imageUrl={webBanner} imageAlt='Website Development' maxW={{base:"200px",sm:"250px",md:"400px",lg:'600px'}} right={{base:"0px",lg:'0px'}} top={{md:'5%'}} /> */}
     <Container maxW='7xl'>
       <Technologies />
     </Container>

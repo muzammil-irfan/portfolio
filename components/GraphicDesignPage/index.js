@@ -13,13 +13,11 @@ export default function GraphicDesignPage() {
     <Container maxW='7xl' >
       {
         GraphicsData.map(item=>{
-          console.log(item)
           return(
-            <GraphicSection title={item.title} description={item.description} options={item.options} />
+            <GraphicSection title={item.title} description={item.description} options={item.options} key={item.title}/>
           )
         })
       }
-      {/* <GraphicsPortfolio /> */}
        </Container>
     </>
   )

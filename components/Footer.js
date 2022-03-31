@@ -81,6 +81,7 @@ export default function Footer() {
               {contactInfo.map((item) => {
                 return (
                   <>
+
                     <Link href={item.href} align="left" key={item.label}>
                       <a target={"_blank"}>
                         <Stack direction={"row"} align="center">
@@ -88,7 +89,7 @@ export default function Footer() {
                           <Text>{item.label}</Text>
                         </Stack>
                       </a>
-                    </Link>
+                    </Link> 
                   </>
                 );
               })}

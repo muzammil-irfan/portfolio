@@ -32,8 +32,8 @@ const videoPortfolio = [
     title:"2D ANIMATION VIDEO",
     description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. ",
     video:{
-      src:"",
-      title:""
+      src:"https://www.youtube.com/embed/a2IxNInk1u0",
+      title:"2D ANIMATION VIDEO"
     }
   },
   {

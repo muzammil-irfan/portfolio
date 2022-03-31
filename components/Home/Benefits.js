@@ -30,7 +30,7 @@ export default function Benefits() {
           {benefitsData.map((item) => {
             return (
               <>
-                <Stack key={item.heading} direction={"row"} px={4} m={2} justifyContent='center'>
+                <Stack key={item.label} direction={"row"} px={4} m={2} justifyContent='center'>
                   <Box p={2}>
                     <Image src={item.icon} width={80} height={80} alt={item.heading} />
                   </Box>

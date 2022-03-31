@@ -69,13 +69,13 @@ const servicesData = [
     title: "Web Development",
     description:"In today’s fast-moving world. it is essential to have a website for your business. At SKillatria, we ensure to create dynamic websites that we develop according to your business.",
     imageUrl: WebDevelopment,
-    href: "/services/webdevelopment",
+    href: "/services/websitedevelopment",
   },
   {
     title: "Mobile App Development",
     description:"Mobiles have become an integral part of our lives. Represent your business on this highly developed platform with an easy to use application", 
     imageUrl: AppDevelopment ,
-    href: "/services/graphicdesign",
+    href: "/services/applicationdevelopment",
   },
   {
     title: "Graphic Design",

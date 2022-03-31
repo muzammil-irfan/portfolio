@@ -14,10 +14,6 @@ export default function MainPage() {
     <Service />
     </Container>
     <Benefits />
-    {/* 
-        <Banner type='Home'/> 
-        <ContactSection />
-    </Container> */}
     </>
   );
 }

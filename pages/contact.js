@@ -197,10 +197,16 @@
 //   "Video Editing/Animation",
 //   "App Development",
 // ];
+import { Flex,Container } from '@chakra-ui/react'
 import React from 'react'
+import ContactPage from '../components/ContactPage';
 
 export default function contact() {
   return (
-    <div>contact</div>
+    <>
+    <Flex bg='#071131'   py={10} justify='center' >
+      <ContactPage />
+    </Flex>
+    </>
   )
 }

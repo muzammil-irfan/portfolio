@@ -80,7 +80,7 @@ export default function Header() {
         </Box>
         </a>
         </Link>
-        <Flex justify="space-evenly" marginRight={6} gap={[3, 6]} display={{ base: "none", md: "flex" }}>
+        <Flex justify="space-evenly"  marginRight={6} gap={[3, 6]} display={{ base: "none", md: "flex" }}>
           {navData.map((item) => {
             return (
               <>

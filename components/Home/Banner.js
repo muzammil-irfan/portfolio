@@ -74,12 +74,13 @@ const AnimatedHeadingComponent = (props)=>{
      <MotionHeading
       fontSize={headingFontSize}
     as="h1"
-    initial={{scale:0}}
-    animate={{ scale: [0,1,0] }}
+    // initial={{scale:0}}
+    animate={{ y: -80,opacity:0 }}
     onAnimationComplete={()=>props.animationComplete()}
     transition={{
-      ease: "easeOut",
-      duration: 3,
+      ease: "easeInOut",
+      duration: 1.5,
+      delay:1
     }}
   >
     {bannerData[props.bannerNumber]}

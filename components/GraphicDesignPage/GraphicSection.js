@@ -51,7 +51,7 @@ export default function GraphicSection(props) {
             // grid={{
             //   rows: 2,
             // }}
-            speed={1200}
+            speed={props.swiperSpeed}
             autoplay={{
               delay: 1000,
               disableOnInteraction: false,
@@ -70,13 +70,11 @@ export default function GraphicSection(props) {
               );
             })}
           </Swiper>
-        {/* </Stack> */}
       </Flex>
     </>
   );
 }
 const SwiperCard = (props) => {
-  console.log('swiperCard',props.options)
   return (
     <Flex alignItems="center" gap={3} p={4} >
       <Stack width="30%">

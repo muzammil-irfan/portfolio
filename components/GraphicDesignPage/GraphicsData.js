@@ -40,6 +40,7 @@ const GraphicsData = [
     {
         title:'BRANDING & LOGO',
         description:description,
+        swiperSpeed:1100,
         options:[
             {
                 title:"LOGO DESIGN",
@@ -91,6 +92,7 @@ const GraphicsData = [
     {
         title:'PRINT DESIGN SERVICE',
         description:description,
+        swiperSpeed:1300,
         options:[
             {
                 title:"RESUME/CV DESIGN",
@@ -178,6 +180,7 @@ const GraphicsData = [
     {
         title:'WEB DESIGN SERVICE',
         description:description,
+        swiperSpeed:1500,
         options:[
             {
                 title:"LANDING PAGE DESIGN",
@@ -211,6 +214,7 @@ const GraphicsData = [
     {
         title:'PRODUCT & MERCHANDISE DESIGN SERVICES',
         description:description,
+        swiperSpeed:1700,
         options:[
             {
                 title:"T-SHIRT DESIGN",
@@ -262,6 +266,7 @@ const GraphicsData = [
     {
         title:'ART & ILLUSTRATIONS',
         description:description,
+        swiperSpeed:1900,
         options:[
             {
                 title:"IILUSTRATION DESIGN",

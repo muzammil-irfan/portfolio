@@ -14,19 +14,19 @@ export default function Footer() {
   const portfolio = [
     {
       label: "Web Development",
-      href: "/services/webdevelopment",
+      href: "/services/websitedevelopment",
     },
     {
       label: "Graphic Design",
       href: "/services/graphicdesign",
     },
     {
-      label: "Video Editing",
-      href: "/services/videoediting",
+      label: "App Development",
+      href: "/services/applicationdevelopment",
     },
     {
-      label: "Photography",
-      href: "/services/photography",
+      label: "Video Editing",
+      href: "/services/videoediting",
     },
   ];
   return (
@@ -39,11 +39,11 @@ export default function Footer() {
         justify="center"
         flexDirection={{ base: "column", md: "row" }}
       >
-        <Stack p={6} maxW={{ md: "300px" }}>
+        <Stack p={6} maxW={{base:"80vw", md: "300px" }}>
           <Link href="/">
             <a>
               <Box>
-                <Image placeholder='blur' src={Logo} alt="Skillatria Logo" />
+                <Image placeholder='blur' src={Logo} alt="Skillatria Logo" title='Skillatria Logo' />
               </Box>
             </a>
           </Link>
@@ -62,11 +62,10 @@ export default function Footer() {
           <Stack>
             <Heading mb={2}>Services</Heading>
             <Stack spacing={4}>
-              {portfolio.map((item, index) => {
-                const contact = '#contact'
+              {portfolio.map((item) => {
                 return (
                   <>
-                    <Link href={contact} key={index}>
+                    <Link href={item.href} key={item.label}>
                       <a>{item.label}</a>
                     </Link>
                   </>
@@ -79,10 +78,10 @@ export default function Footer() {
           <Stack>
             <Heading mb={2}>Contact us</Heading>
             <Stack spacing={4}>
-              {contactInfo.map((item, index) => {
+              {contactInfo.map((item) => {
                 return (
                   <>
-                    <Link href={item.href} align="left" key={index}>
+                    <Link href={item.href} align="left" key={item.label}>
                       <a target={"_blank"}>
                         <Stack direction={"row"} align="center">
                           <Box>{item.icon} </Box>

@@ -5,7 +5,7 @@ import GraphicsBanner from '../../public/images/graphicDesign/graphicsBanner.png
 
 export default function Banner() {
     const heading= useBreakpointValue({base:"xs",sm:"lg",md:"2xl",lg:"4xl"})
-        const text= useBreakpointValue({base:"10px",sm:"sm",md:"lg",lg:"xl"})
+    const text= useBreakpointValue({base:"9px",sm:"sm",md:"lg",lg:"xl"})
   return (
     <>
     <Flex justifyContent={'center'} color='white'>

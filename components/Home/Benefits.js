@@ -27,7 +27,7 @@ export default function Benefits() {
           </Stack>
         </Flex>
         <SimpleGrid columns={{ sm: 1, md: 2 }} gap={8} mx={4}>
-          {benefitsData.map((item, index) => {
+          {benefitsData.map((item) => {
             return (
               <>
                 <Stack key={item.heading} direction={"row"} px={4} m={2} justifyContent='center'>

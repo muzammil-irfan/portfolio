@@ -58,12 +58,13 @@ const ContactSection = () => {
   const change = handleChange;
   return (
     <>
-      <Flex direction="column" gap={4} m={10}>
+      <Flex direction="column" gap={4} p={{base:10,sm:20}} bg={"#071131"}>
         <Stack spacing="8" id="contact">
           <Box
             py={8}
             px={8}
-            bg={"gray.50"}
+            bg={"#0e205a"}
+            color='white'
             boxShadow={{ base: "none", sm: "md" }}
             borderRadius={{ base: "none", sm: "xl" }}
           >
@@ -72,7 +73,6 @@ const ContactSection = () => {
                 Any query? Lets solve it now!
               </Heading>
             </Stack>
-            {/* <form > */}
             <Stack
               spacing="6"
               method="POST"
@@ -136,12 +136,11 @@ const ContactSection = () => {
                 </FormControl>
               </Stack>
               <Stack spacing="6" direction={"row"} justify="flex-end">
-                <Button isLoading={loading} loadingText='Sending...' variant="primary" type="submit" bg="gray.200" px={8}>
+                <Button isLoading={loading} loadingText='Sending...' variant="primary" type="submit" bg="#0f82c4" px={8}>
                   Send Message
                 </Button>
               </Stack>
             </Stack>
-            {/* </form> */}
           </Box>
         </Stack>
       </Flex>
@@ -153,6 +152,6 @@ export default ContactSection;
 const radioData = [
   "Website Development",
   "Graphic Design",
-  "Video Editing and Animation",
-  "Product Photography",
+  "Video Editing/Animation",
+  "App Development",
 ];

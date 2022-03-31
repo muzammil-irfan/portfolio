@@ -14,7 +14,7 @@ export default function GraphicDesignPage() {
       {
         GraphicsData.map(item=>{
           return(
-            <GraphicSection title={item.title} description={item.description} options={item.options} key={item.title}/>
+            <GraphicSection title={item.title} description={item.description} options={item.options} key={item.title} swiperSpeed={item.swiperSpeed} />
           )
         })
       }

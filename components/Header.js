@@ -42,7 +42,7 @@ export default function Header() {
         },
         {
           label: "App Development",
-          href: "/services/appdevelopment",
+          href: "/services/applicationdevelopment",
         },
         {
           label: "Graphic Design",
@@ -63,7 +63,6 @@ export default function Header() {
       href: "/contact",
     },
   ];
-  // const router = Router();
   return (
     <>
       <Flex
@@ -82,15 +81,14 @@ export default function Header() {
         </a>
         </Link>
         <Flex justify="space-evenly" marginRight={6} gap={[3, 6]} display={{ base: "none", md: "flex" }}>
-          {navData.map((item, index) => {
+          {navData.map((item) => {
             return (
               <>
                 {item.label === "Services" ? (
                   <Menu key={item.label}>
                     <MenuButton >{item.label}<ChevronDownIcon /></MenuButton>
                     <MenuList>
-                      {item.options.map((option, index) => {
-                        const contact = '#services'
+                      {item.options.map((option) => {
                         return (
                           <>
                             <Link href={option.href} key={option.href}>
@@ -131,7 +129,7 @@ export default function Header() {
             gap={3}
             height={"full"}
           >
-            {navData.map((item, index) => {
+            {navData.map((item) => {
              
               return (
                 <>
@@ -142,13 +140,12 @@ export default function Header() {
                           Services
                         </MenuButton>
                         <MenuList>
-                          {item.options.map((option, index) => {
-                             const contact = '#services'
+                          {item.options.map((option) => {
                             return (
                               <>
-                                <Link href={option.href} key={index}>
+                                <Link href={option.href} key={option.label} >
                                   <a>
-                                    <MenuItem>{option.label}</MenuItem>
+                                    <MenuItem onClick={()=>setTimeout(onClose,600)}>{option.label}</MenuItem>
                                   </a>
                                 </Link>
                               </>
@@ -173,85 +170,6 @@ export default function Header() {
       </Drawer>
           </Box>
       </Flex>
-
-      {/* <Flex
-        align={"center"}
-        display={{ base: "flex", md: "none" }}
-        p={1}
-        shadow={"md"}
-        position={"absolute"}
-        top={0}
-        width={"full"}
-        zIndex={2}
-        justify={"center"}
-      >
-        <Flex
-          bg={"#fff"}
-          width={expand ? 150 : 35}
-          height={"100vh"}
-          shadow={"sm"}
-          position="absolute"
-          left={0}
-          top={0}
-          flexDirection={"column"}
-        >
-          <Box>
-            <Button onClick={()=>setExpand(!expand)} my={1} >
-            
-          </Button>
-          </Box>
-          <Flex
-            align={"center"}
-            flexDirection={"column"}
-            gap={3}
-            display={expand ? "flex" : "none"}
-            height={"full"}
-          >
-            {navData.map((item, index) => {
-              return (
-                <>
-                  {item.label === "Portfolio" ? (
-                    <>
-                      <Menu>
-                        <MenuButton rightIcon={<ChevronDownIcon />}>
-                          Portfolio
-                        </MenuButton>
-                        <MenuList>
-                          {item.options.map((option, index) => {
-                            return (
-                              <>
-                                <Link href={option.href} key={index}>
-                                  <a>
-                                    <MenuItem>{option.label}</MenuItem>
-                                  </a>
-                                </Link>
-                              </>
-                            );
-                          })}
-                        </MenuList>
-                      </Menu>
-                    </>
-                  ) : (
-                    <Link href={item.href} key={index}>
-                      <a>{item.label}</a>
-                    </Link>
-                  )}
-                </>
-              );
-            })}
-          </Flex>
-          <Flex
-            align={"center"}
-            flexDirection={"column"}
-            gap={3}
-            display={expand ? "none" : "flex"}
-            height={"full"}
-          ></Flex>
-        </Flex>
-        <Box position={"relative"}>
-          <Image src={Logo} alt="Skillatria Logo" height={30} width={100} />
-        </Box>
-      </Flex> */}
       
     </>
   );

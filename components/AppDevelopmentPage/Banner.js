@@ -33,11 +33,10 @@ import {
               pt={{ base: 6, sm: 10, md: "10vh" }}
             >
               <Heading as="h1" fontSize={heading}>
-                Application DEVELOPMENT
+                Application Development
               </Heading>
               <Text fontSize={text}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Applications are used commonly by every smartphone users. It is a great way to reach every smartphone users by making an app for your business
               </Text>
             </Stack>
             <Stack

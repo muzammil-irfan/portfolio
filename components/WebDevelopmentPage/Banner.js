@@ -36,8 +36,7 @@ export default function Banner() {
               WEBSITE DEVELOPMENT
             </Heading>
             <Text fontSize={text}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Website is the digital identity of every business. It gives business an image in the digital world and make your business able to reach globally
             </Text>
           </Stack>
           <Stack

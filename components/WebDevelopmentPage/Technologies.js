@@ -47,7 +47,7 @@ const TechCard = (props) => {
 const techData = [
   {
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. ",
+      "Node js is a Javascript runtime environment for backend development. We use it to deliver scalable, fast and secure website applications.",
     image: {
       url: NodeJs,
       alt: "node js",
@@ -55,7 +55,7 @@ const techData = [
   },
   {
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. ",
+      "React js is a javascript frontend library developed by facebook. It gives the smooth single page application functionality which we won't be able to achieve from normal bootstrap and javascript coding.",
     image: {
       url: ReactJs,
       alt: "react js",
@@ -63,7 +63,7 @@ const techData = [
   },
   {
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. ",
+      "Next js is the amazing framework build on react. It is reknown for its seo performance as well as generating data statically",
     image: {
       url: NextJs,
       alt: "next js",

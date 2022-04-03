@@ -35,8 +35,7 @@ export default function Banner() {
               VIDEO EDITING/ANIMATION
             </Heading>
             <Text fontSize={text}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Video is the great medium to capture and engage potential audiences. It give us ability to convey and connect our business with them
             </Text>
           </Stack>
           <Stack

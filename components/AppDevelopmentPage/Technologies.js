@@ -45,7 +45,7 @@ const TechCard = (props) => {
 const techData = [
   {
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. ",
+      "React Native is the hybrid way to make applications for ios and android at once. It is also built by facebook and it can make those applications which we need to make for android and ios separately with great performance",
     image: {
       url: ReactNative,
       alt: "react native",

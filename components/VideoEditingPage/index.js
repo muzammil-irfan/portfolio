@@ -22,7 +22,7 @@ export default function VideoEditingPage() {
 const videoPortfolio = [
   {
     title:"VIDEO EDITING",
-    description:"Video is an important factor because it's easy to digest, entertaining and engaging.<br />SKillatria provides you Video Editing Services like, VLOGS AND TRAVEL, WEDDING HIGHLIGHTS, CINEMATIC SEQUENCES, PODCASTS, PRODUCT COMMERCIALS, DOCUMENTRIES, FASHION FILMS and PICTURES SLIDESHOW",
+    description:"Video is an important factor because it's easy to digest, entertaining and engaging. Skillatria provides you its Video Editing Services to market your business through these medium",
     video:{
       src:"https://www.youtube.com/embed/oUKZZGoJsME",
       title:"VIDEO EDITING"
@@ -30,7 +30,7 @@ const videoPortfolio = [
   },
   {
     title:"2D ANIMATION VIDEO",
-    description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. ",
+    description:"2D Animation is the advanced level of videos which provides more engagement than usual videos. It is commonly used for marketing and social media advertising videos",
     video:{
       src:"https://www.youtube.com/embed/a2IxNInk1u0",
       title:"2D ANIMATION VIDEO"
@@ -38,7 +38,7 @@ const videoPortfolio = [
   },
   {
     title:"WHITE BOARD ANIMATION",
-    description:"Whiteboard videos are cheaper as compared to animations and roi is  mindblowing!  SKillatria also provides Whiteboard animation video service  to convey your value prosposition clearly and draw people closer to making a buying decision and boost your sales",
+    description:"Whiteboard videos are cheaper as compared to animations and roi is  mindblowing!  SKillatria also provides Whiteboard animation video service  to convey your value prosposition clearly ",
     video:{
       src:"https://www.youtube.com/embed/s14Vouui7U0",
       title:"WHITE BOARD ANIMATION"

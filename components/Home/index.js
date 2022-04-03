@@ -1,7 +1,6 @@
 import { Container } from '@chakra-ui/react';
 import React from 'react';
 import Banner from './Banner';
-import ContactSection from '../Contact';
 import Benefits from './Benefits';
 import Service from './Service';
 

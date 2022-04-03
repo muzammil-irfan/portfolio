@@ -67,7 +67,7 @@ const ServiceCard = (props) => {
 const servicesData = [
   {
     title: "Web Development",
-    description:"In today’s fast-moving world. it is essential to have a website for your business. At SKillatria, we ensure to create dynamic websites that we develop according to your business.",
+    description:"In today’s fast-moving world. it is essential to have a website for your business. At Skillatria, we ensure to create dynamic websites that we develop according to your business.",
     imageUrl: WebDevelopment,
     href: "/services/websitedevelopment",
   },
@@ -79,13 +79,13 @@ const servicesData = [
   },
   {
     title: "Graphic Design",
-    description:"In modern world, art & design is already become a part of our life. Design is one of the most important factor factoor when we building a brand. SKillatria understand your requirements and make graphics designs for your business. ", 
+    description:"In modern world, art & design is already become a part of our life. Design is one of the most important factor factoor when we building a brand. Skillatria understand your requirements and make graphics designs for your business. ", 
     imageUrl: GraphicDesign,
     href: "/services/graphicdesign",
   },
   {
     title: "Video Editing",
-    description:"Video is an important factor because it's easy to digest, entertaining and engaging, and marketers like it because it can give a potentially huge return on investment (ROI) through many channels. Video is also very accessible to anyone with internet access, both to watch and to produce. SKil yourlatria provides you video editing service...   ",
+    description:"Video is an important factor because it's easy to digest, entertaining and engaging, and marketers like it because it can give a potentially huge return on investment (ROI) through many channels. Video is also very accessible to anyone with internet access, both to watch and to produce. Skillatria provides you video editing service...   ",
     imageUrl: VideoEditing,
     href: "/services/videoediting",
   },

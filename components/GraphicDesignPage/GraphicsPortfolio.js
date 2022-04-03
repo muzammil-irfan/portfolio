@@ -31,7 +31,7 @@ export default function GraphicsPortfolio() {
       <CommonHeading >
         PORTFOLIO
       </CommonHeading>
-      <Stack maxW='900px' my={10}>
+      <Stack maxW='900px' py={10}>
       <Swiper
         effect={"coverflow"}
         grabCursor={true}

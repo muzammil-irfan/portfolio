@@ -1,5 +1,5 @@
 import '../styles/globals.css'
-import {ChakraProvider } from '@chakra-ui/react';
+import {Box, ChakraProvider } from '@chakra-ui/react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { useEffect } from 'react'

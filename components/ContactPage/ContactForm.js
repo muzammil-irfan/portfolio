@@ -66,6 +66,7 @@ export default function ContactForm() {
         as="form"
         p={6}
         color='white'
+        id='contactForm'
         bg='#0e205a'
         boxShadow={"dark-lg"}
       >
@@ -136,6 +137,7 @@ export default function ContactForm() {
             type="submit"
             bg="#0f82c4"
             px={8}
+            id='sendMessage'
           >
             Send Message
           </Button>

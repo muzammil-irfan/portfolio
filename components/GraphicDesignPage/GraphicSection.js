@@ -11,7 +11,7 @@ import webDesign from "../../public/images/graphicDesign/websiteDesign.png";
 export default function GraphicSection(props) {
   return (
     <>
-      <Flex direction="column" alignItems="center" my={8} px={2}>
+      <Flex direction="column" alignItems="center" py={8} px={2}>
         <CommonHeading>{props.title}</CommonHeading>
         <Text textAlign={"center"} width={{sm:"75%"}} mb={2} >
           {props.description}

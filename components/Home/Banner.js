@@ -9,6 +9,7 @@ import {
   useDisclosure,
   useBreakpointValue,
 } from "@chakra-ui/react";
+import Link from 'next/link';
 import CommonButton from "../common/CommonButton";
 import Typewriter from "typewriter-effect";
 import CommonHeading from "../common/CommonHeading";
@@ -35,7 +36,11 @@ export default function Banner() {
             </Text>
             <Flex justifyContent="center" gap={{ base: 6, sm: 20 }} p={4}>
               <CommonButton label="GET IN TOUCH" />
+              <Link href='#services'>
+              <a>
               <CommonButton label="OUR SERVICES" />
+              </a>
+              </Link>
             </Flex>
           </Stack>
         </Flex>

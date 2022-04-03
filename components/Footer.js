@@ -33,10 +33,12 @@ export default function Footer() {
     <>
       <Flex
         py={6}
-        bg={"background"}
-        boxShadow='inner'
+        bg={"white"}
+        boxShadow='dark-lg'
+        borderColor='background'
         mt={6}
         justify="center"
+        color="primary"
         flexDirection={{ base: "column", md: "row" }}
       >
         <Stack p={6} maxW={{base:"80vw", md: "300px" }}>

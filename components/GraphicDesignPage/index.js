@@ -11,7 +11,7 @@ export default function GraphicDesignPage() {
   return (
     <>
     <CommonBanner title='Graphic Design' description={description} imageUrl={GraphicsBanner} imageAlt='Graphic Design'  />
-    <Container maxW='7xl' >
+    <Container maxW='7xl' bg={'background'}>
       {
         GraphicsData.map(item=>{
           return(

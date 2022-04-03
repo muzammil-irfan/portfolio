@@ -5,6 +5,7 @@ import {
   SimpleGrid,
   Box,
   Text,
+  StackDivider,
 } from "@chakra-ui/react";
 import CommonHeading from "../common/CommonHeading";
 import React from "react";
@@ -17,13 +18,14 @@ import Image from "next/image";
 export default function Benefits() {
   return (
     <>
-      <Flex flexDirection={"column"} justify={"center"} my={8} >
+      <Flex flexDirection={"column"}  justify={"center"} py={8} bg="background" >
+        
         <Flex justify={"center"} my={8}>
           <Stack textAlign={"center"}>
             <CommonHeading fontSize={{base:'xl',sm:'2xl',md:'4xl'}}>
-              Why us?
+              Check what you might get
             </CommonHeading>
-            <Text fontWeight={'medium'} fontSize={{base:'xl',sm:'2xl',md:'4xl'}}>Lets check out the Benefits First</Text>
+            {/* <Text fontWeight={'medium'} fontSize={{base:'xl',sm:'2xl',md:'4xl'}}>Lets check out the Benefits First</Text> */}
           </Stack>
         </Flex>
         <SimpleGrid columns={{ sm: 1, md: 2 }} gap={8} mx={4}>
@@ -35,7 +37,7 @@ export default function Benefits() {
                     <Image src={item.icon} width={80} height={80} alt={item.heading} />
                   </Box>
                   <Stack width="75%">
-                    <Heading size={"lg"}>{item.heading}</Heading>
+                    <Heading size={"lg"} as='h3'>{item.heading}</Heading>
                     <Text fontSize={"lg"}>{item.label}</Text>
                   </Stack>
                 </Stack>

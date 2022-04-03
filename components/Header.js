@@ -68,10 +68,10 @@ export default function Header() {
       <Flex
         align={"center"}
         justify="space-between"
-        bg={'background'}
+        bg={'white'}
         // 
         p={3}
-        shadow="md"
+        shadow="dark-lg"
       >
         <Link href='/'>
         <a>

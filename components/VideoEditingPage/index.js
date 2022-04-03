@@ -7,7 +7,7 @@ export default function VideoEditingPage() {
   return (
     <>
     <Banner />
-    <Container maxW='7xl' >
+    <Container maxW='7xl' bg='background' >
       {
         videoPortfolio.map(item=>{
           return(

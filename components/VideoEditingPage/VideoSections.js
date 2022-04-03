@@ -6,7 +6,7 @@ import CommonButton from '../common/CommonButton';
 export default function VideoSections(props) {
   return (
     <>
-      <Stack alignItems='center' my={8} px={2}  >
+      <Stack alignItems='center' py={8} px={2}  >
         <CommonHeading>{props.title}</CommonHeading>
         <Text textAlign="center"  width={{sm:"75%"}} pb={4}>{props.description} </Text>
         <AspectRatio   width='100%' maxW='560px' height={{base:'50vw',md:'315px'}} ratio={'16/9'}>

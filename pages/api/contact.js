@@ -33,13 +33,13 @@ const handler = async (req,res) => {
             };
             transporter.sendMail(mailOptions,((err,resolve)=>{
                 if(err !== null){
-                    res.status(401).send(err);
+                    return res.status(401).send(err);
                 } else {
-                    res.status(200).send(resolve.response).end();
+                    return res.status(200).send(resolve.response)
                 }
             }))
         } else {
-            res.status(401).send('Page not found');
+            return res.status(401).send('Page not found');
         }
 }
 export default handler;

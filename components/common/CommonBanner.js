@@ -11,7 +11,7 @@ export default function CommonBanner(props) {
             <Heading as='h1' fontSize={useBreakpointValue({base:"xs",sm:"lg",md:"2xl",lg:"4xl"})} >
                 {props.title}
             </Heading>
-            <Text fontSize={useBreakpointValue({base:"8px",sm:"sm",md:"lg",lg:"xl"})}>
+            <Text fontSize={useBreakpointValue({base:"0.5rem",sm:"xs",md:"lg",lg:"xl"})}>
                 {props.description}
             </Text>
             </Stack>

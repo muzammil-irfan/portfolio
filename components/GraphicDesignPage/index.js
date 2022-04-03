@@ -7,7 +7,7 @@ import GraphicsData from './GraphicsData';
 import GraphicsPortfolio from './GraphicsPortfolio';
 // import GraphicsPortfolio from './GraphicsPortfolio';
 export default function GraphicDesignPage() {
-  const description=' In modern world, art & design is already become a part of our life. Design is one of the most important factor factoor when we building a brand. Skillatria understand your requirements and make graphics designs for your business.'
+  const description='Design is one of the most important factor when we build a brand. Skillatria understand your requirements and provide graphic designs for your business.'
   return (
     <>
     <CommonBanner title='Graphic Design' description={description} imageUrl={GraphicsBanner} imageAlt='Graphic Design'  />

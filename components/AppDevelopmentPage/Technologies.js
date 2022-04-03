@@ -20,7 +20,7 @@ export default function Technologies() {
           </>
         ))}
         </Stack>
-        <CommonButton label='Get Quote' />
+        <CommonButton  label='Get Quote' />
       </Flex>
     </>
   );

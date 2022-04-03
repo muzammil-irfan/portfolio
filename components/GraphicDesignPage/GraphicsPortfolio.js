@@ -23,6 +23,7 @@ import rafayCard from '../../public/images/graphicDesign/portfolio/rafayCard.png
 import rafayLogo from '../../public/images/graphicDesign/portfolio/rafayLogo.png';
 import rafayLogo2 from '../../public/images/graphicDesign/portfolio/rafayLogo2.png';
 import Image from 'next/image';
+import CommonButton from '../common/CommonButton';
 
 export default function GraphicsPortfolio() {
   return (
@@ -31,7 +32,7 @@ export default function GraphicsPortfolio() {
       <CommonHeading >
         PORTFOLIO
       </CommonHeading>
-      <Stack maxW='900px' py={10}>
+      <Stack maxW={{base:"80vw",md:'900px'}} py={10}>
       <Swiper
         effect={"coverflow"}
         grabCursor={true}
@@ -68,7 +69,7 @@ export default function GraphicsPortfolio() {
         }
       </Swiper>
       </Stack>
-      
+      <CommonButton label='Get Quote' my={4} />
     </Flex>
     </>
   )

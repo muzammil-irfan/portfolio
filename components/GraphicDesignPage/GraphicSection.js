@@ -7,7 +7,8 @@ import "swiper/css";
 import "swiper/css/scrollbar";
 import { Scrollbar, Autoplay } from "swiper";
 import Image from "next/image";
-import webDesign from "../../public/images/graphicDesign/websiteDesign.png";
+import CommonButton from "../common/CommonButton";
+
 export default function GraphicSection(props) {
   return (
     <>
@@ -16,9 +17,7 @@ export default function GraphicSection(props) {
         <Text textAlign={"center"} width={{sm:"75%"}} mb={2} >
           {props.description}
         </Text>
-        {/* <Stack width="100%" direction={'row'}> */}
           <Swiper
-            // slidesPerView={3}
             spaceBetween={2}
             grabCursor={true}
             // loop={true}
@@ -48,9 +47,6 @@ export default function GraphicSection(props) {
                 slidesPerView:3,
               },
             }}
-            // grid={{
-            //   rows: 2,
-            // }}
             speed={props.swiperSpeed}
             autoplay={{
               delay: 1000,
@@ -70,6 +66,7 @@ export default function GraphicSection(props) {
               );
             })}
           </Swiper>
+          <CommonButton label='Get Quote' my={6} />
       </Flex>
     </>
   );

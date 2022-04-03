@@ -11,18 +11,6 @@ import Image from "next/image";
 import webBanner from "../../public/images/webDev/webBanner.png";
 
 export default function Banner() {
-  const heading = useBreakpointValue({
-    base: "xs",
-    sm: "lg",
-    md: "2xl",
-    lg: "4xl",
-  });
-  const text = useBreakpointValue({
-    base: "10px",
-    sm: "sm",
-    md: "lg",
-    lg: "xl",
-  });
   return (
     <>
       <Flex justifyContent={"center"} color="white">
@@ -32,11 +20,28 @@ export default function Banner() {
             position="relative"
             pt={{ base: 6, sm: 10, md: "10vh" }}
           >
-            <Heading as="h1" fontSize={heading}>
+            <Heading
+              as="h1"
+              fontSize={useBreakpointValue({
+                base: "xs",
+                sm: "lg",
+                md: "2xl",
+                lg: "4xl",
+              })}
+            >
               WEBSITE DEVELOPMENT
             </Heading>
-            <Text fontSize={text}>
-            Website is the digital identity of every business. It gives business an image in the digital world and make your business able to reach globally
+            <Text
+              fontSize={useBreakpointValue({
+                base: "10px",
+                sm: "sm",
+                md: "lg",
+                lg: "xl",
+              })}
+            >
+              Website is the digital identity of every business. It gives
+              business an image in the digital world and make your business able
+              to reach globally
             </Text>
           </Stack>
           <Stack

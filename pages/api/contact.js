@@ -33,6 +33,7 @@ const handler = async (req,res) => {
             };
             transporter.sendMail(mailOptions,((err,resolve)=>{
                 if(err !== null){
+                    console.log(err)
                     return res.status(401).send(err);
                 } else {
                     return res.status(200).send(resolve.response)

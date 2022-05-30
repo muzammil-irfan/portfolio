@@ -52,8 +52,8 @@ const ServiceCard = (props) => {
           {props.description}
         </Text>
         </Stack>
-        <Link href={props.href}>
-        <a>
+        <Link href={props.href} aria-label={props.imageAlt} >
+        <a aria-label={props.imageAlt} >
           <Flex alignItems={'center'}>
             <HiOutlineArrowNarrowRight /> &nbsp; Learn more
           </Flex>
@@ -67,26 +67,30 @@ const ServiceCard = (props) => {
 const servicesData = [
   {
     title: "Web Development",
-    description:"In today’s fast-moving world. it is essential to have a website for your business. At Skillatria, we ensure to create dynamic websites that we develop according to your business.",
+    description:"In today’s fast-moving world. it is essential to have a website for your business. At Skillatria, we ensure to develop custom websites according to your desire.",
     imageUrl: WebDevelopment,
+    imageAlt:'custom web development services',
     href: "/services/websitedevelopment",
   },
   {
     title: "Mobile App Development",
     description:"Mobiles have become an integral part of our lives. Represent your business on this highly developed platform with an easy to use application", 
     imageUrl: AppDevelopment ,
+    imageAlt:'custom application development services',
     href: "/services/applicationdevelopment",
   },
   {
     title: "Graphic Design",
     description:"In modern world, art & design is already become a part of our life. Design is one of the most important factor factoor when we building a brand. Skillatria understand your requirements and make graphics designs for your business. ", 
     imageUrl: GraphicDesign,
+    imageAlt:'freelance graphic designing services',
     href: "/services/graphicdesign",
   },
   {
     title: "Video Editing",
     description:"Video is an important factor because it's easy to digest, entertaining and engaging, and marketers like it because it can give a potentially huge return on investment (ROI) through many channels. Video is also very accessible to anyone with internet access, both to watch and to produce. Skillatria provides you video editing service...   ",
     imageUrl: VideoEditing,
+    imageAlt:'freelance video editing services',
     href: "/services/videoediting",
   },
 ];

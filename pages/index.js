@@ -1,4 +1,4 @@
-
+import {NextSeo} from 'next-seo'
 import Head from 'next/head'
 
 import MainPage from '../components/Home'
@@ -7,10 +7,15 @@ export default function Home() {
   return (
    <>
    <Head>
-     <title>Welcome to skillatria</title>
-     <link rel='icon' href='/favicon.ico' /> 
-     <meta name='description' content='We are a talented team who provides the micro services of ecommerce like website development, Graphic design, Video editing and product photography' /> 
+     <title> </title>
+     
+     <meta name='description' content='Skillatria, a digital agency which provides the services of website development, Graphic design, Video editing and app development' /> 
+     
    </Head>
+   <NextSeo
+   title='Digital Agency based in Pakistan'
+   description='Skillatria, a digital agency which provides the services of website development, Graphic design, Video editing and app development'
+   />
     <MainPage />
    </>
 

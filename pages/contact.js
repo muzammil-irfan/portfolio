@@ -198,12 +198,16 @@
 //   "App Development",
 // ];
 import { Flex,Container } from '@chakra-ui/react'
+import { NextSeo } from 'next-seo';
 import React from 'react'
 import ContactPage from '../components/ContactPage';
 
 export default function contact() {
   return (
     <>
+    <NextSeo 
+    title='Contact us'
+    />
     <Flex bg='#071131'   py={10} justify='center' >
       <ContactPage />
     </Flex>

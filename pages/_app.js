@@ -7,6 +7,7 @@ import Script from 'next/script'
 import { useRouter } from 'next/router'
 import { GTM_ID, pageview } from '../lib/gtm'
 import theme from '../lib/theme'
+import { DefaultSeo } from 'next-seo';
 function MyApp({ Component, pageProps }) {
   const router = useRouter()
   useEffect(() => {
@@ -32,6 +33,19 @@ function MyApp({ Component, pageProps }) {
           `,
         }}
       />
+      <DefaultSeo
+          openGraph={{
+            type: 'website',
+            locale: 'en_IE',
+            url: 'https://www.url.ie/',
+            site_name: 'SiteName',
+          }}
+          twitter={{
+            handle: '@handle',
+            site: '@site',
+            cardType: 'summary_large_image',
+          }}
+        />
     <ChakraProvider theme={theme}>
       <Header />
      <Component {...pageProps} />

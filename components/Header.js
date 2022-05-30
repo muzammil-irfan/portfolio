@@ -113,7 +113,7 @@ export default function Header() {
           })}
         </Flex>
         <Box display={{md: "none" }}>
-          <IconButton icon={<HamburgerIcon />} aira-label='Hamburger Icon' onClick={onOpen} my={1} variant='ghost' /> 
+          <IconButton icon={<HamburgerIcon />} aira-label='Hamburger Icon' onClick={onOpen} my={1} variant='ghost' name='menu' /> 
           <Drawer placement={'right'} onClose={onClose} isOpen={isOpen}>
         <DrawerOverlay />
         <DrawerContent>

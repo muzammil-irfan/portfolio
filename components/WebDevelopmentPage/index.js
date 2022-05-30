@@ -6,9 +6,10 @@ import Technologies from './Technologies'
 
 
 export default function WebDevelopmentPage() {
-  const description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus viverra maecenas accumsan lacus viverra maecenas accumsan lacus vel facilisis.'
+  
   return (
     <>
+    
     <Banner />
     <Container maxW='7xl'>
       <Technologies />
